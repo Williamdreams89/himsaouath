@@ -1,15 +1,17 @@
-import { Title, createStyles } from "@mantine/core"
+import { ThemeIcon, Title, createStyles } from "@mantine/core"
+import { IconAnchor, IconBookDownload, IconPhoneOutgoing, IconUserPlus, IconUsersGroup } from "@tabler/icons-react"
+import { IconCalendarCheck, IconUserExclamation, IconWorld, IconWorldExclamation } from "@tabler/icons-react"
 
 const data = [
-    { linkName: 'Official Website', description: 'I want to visit our official website for more information about the Department of Health Information Management.', url: '', icon: '' },
-    { linkName: 'Account Issues', description: 'Lets Address any issue pertaining to your account now', url: '', icon: '' },
-    { linkName: 'Report a problem', description: 'Anything regarding academic health', url: '', icon: '' },
-    { linkName: 'Counselling & Guidance', description: 'I want to book an appointment for counselling session', url: '', icon: '' },
-    { linkName: 'Academic Programs', description: 'I want to explore the various academic programs offered by our department to shape my career in healthcare and information management.', url: '', icon: '' },
-    { linkName: 'Faculty and Staff', description: 'I want to meet our dedicated team of faculty and staff who are committed to providing quality education and research in health information management.', url: '', icon: '' },
-    { linkName: 'Admissions', description: "I want to find out the admission process and requirements to join our department's programs.", url: '', icon: '' },
-    { linkName: 'Research and Publications', description: "I want to explore our research initiatives and access published works in health information management.", url: '', icon: '' },
-    { linkName: 'Contact Directoies', description: "I want to get direct contact information for specific individuals or departments within our department.", url: '', icon: '' },
+    { linkName: 'Official Website', description: 'I want to visit our official website for more information about the Department of Health Information Management.', url: '', icon: IconWorld },
+    { linkName: 'Account Issues', description: 'Lets Address any issue pertaining to your account now', url: '',icon: IconUserExclamation },
+    { linkName: 'Report a problem', description: 'Anything regarding academic health', url: '',icon: IconWorldExclamation },
+    { linkName: 'Counselling & Guidance', description: 'I want to book an appointment for counselling session', url: '',icon: IconCalendarCheck },
+    { linkName: 'Academic Programs', description: 'I want to explore the various academic programs offered by our department to shape my career in healthcare and information management.', url: '',icon: IconAnchor },
+    { linkName: 'Faculty and Staff', description: 'I want to meet our dedicated team of faculty and staff who are committed to providing quality education and research in health information management.', url: '',icon: IconUsersGroup },
+    { linkName: 'Admissions', description: "I want to find out the admission process and requirements to join our department's programs.", url: '',icon: IconUserPlus },
+    { linkName: 'Research and Publications', description: "I want to explore our research initiatives and access published works in health information management.", url: '',icon: IconBookDownload },
+    { linkName: 'Contact Directoies', description: "I want to get direct contact information for specific individuals or departments within our department.", url: '',icon: IconPhoneOutgoing },
 ]
 
 const usestyles = createStyles((theme) => ({
@@ -35,7 +37,10 @@ const usestyles = createStyles((theme) => ({
         width: '200px',
         height: '200px',
         boxShadow: "0px 6px 33px -3px rgba(0,0,0,0.2)",
-        borderRadius: '50%'
+        borderRadius: '50%',
+        display: 'flex',
+        justifyContent:'center',
+        alignItems: 'center'
     },
     linkInfo: {
         textAlign: 'center',
@@ -57,13 +62,15 @@ const ContactLinks = () => {
                 weight={900}
                 align="center"
             >
-                <h2 className=" text-center">Welcome to our Contact Page</h2>
+                <h2 className=" text-center">Welcome back, how can we help you?</h2>
             </Title>
             <hr className='w-[4rem] m-auto mb-[5rem]' style={{ borderWidth: ".15rem", border: ".15rem solid rgba(101, 233, 220, 0.99)" }} />
 
             <div className={classes.LinksContainer}>
                 {data.map(linkItem => <div className={classes.linkParent}>
-                    <div className={classes.contactLinkImage}></div>
+                    <div className={classes.contactLinkImage}>
+                        <linkItem.icon size='50%' color="rgba(101, 233, 220, 0.99)" />
+                    </div>
                     <div className={classes.linkInfo}>
                         <h2>{linkItem.linkName}</h2>
                         <p>{linkItem.description}</p>
