@@ -1,8 +1,13 @@
 import React from 'react'
+import { Navigator } from '../components/Navigator'
+import AnimatedBanner from '../components/ReusableAnimatedBanner'
 
 const About = () => {
   return (
-    <div>About</div>
+    <div>
+      <Navigator />
+      <AnimatedBanner />
+    </div>
   )
 }
 
