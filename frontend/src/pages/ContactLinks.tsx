@@ -1,6 +1,5 @@
-import { ThemeIcon, Title, createStyles } from "@mantine/core"
-import { IconAnchor, IconBookDownload, IconPhoneOutgoing, IconUserPlus, IconUsersGroup } from "@tabler/icons-react"
-import { IconCalendarCheck, IconUserExclamation, IconWorld, IconWorldExclamation } from "@tabler/icons-react"
+import {  Title, createStyles } from "@mantine/core"
+import { IconAnchor, IconBookDownload, IconPhoneOutgoing, IconUserPlus, IconUsersGroup, IconCalendarCheck, IconUserExclamation, IconWorld, IconWorldExclamation } from "@tabler/icons-react"
 
 const data = [
     { linkName: 'Official Website', description: 'I want to visit our official website for more information about the Department of Health Information Management.', url: '', icon: IconWorld },
